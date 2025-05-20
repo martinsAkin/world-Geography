@@ -3,17 +3,15 @@ import '../styling/world.css'
 import { Headbar } from './Homepage'
 import countryData from '../data.json'
 import { Link } from "react-router-dom";
-// import backIcon from "/asset/back-icon (1).svg"
-// import backIcon from "../asset/back-icon (1).svg"
 
 export function CountryComponent(){
  const { countryName } = useParams()
  const country = countryData.find((c) => c.name === countryName)
  const alphaCodeToName = {}
  countryData.forEach(ctry => {alphaCodeToName[ctry.alpha3Code] = ctry.name})
- const getBorderNames = (borderAbbv) => {
-  return borderAbbv.map(abbv => alphaCodeToName[abbv] || abbv)
- }
+//  const getBorderNames = (borderAbbv) => {
+//   return borderAbbv.map(abbv => alphaCodeToName[abbv] || abbv)
+//  }
 
  if(!country) return <h2>Country Not Found!</h2>;
  
@@ -40,14 +38,20 @@ export function CountryComponent(){
            <h3>Border Countries:</h3>
            
                    <ul>
-                      {country.borders.map(code => (
+                      {
+                        country.borders?.length > 0 ? (
+                      country.borders.map(code => (
                         <Link to={`/details/${alphaCodeToName[code]}`} className='linkNav'>
                           <li key={code} className='borderDisplay'>{alphaCodeToName[code] || code}</li>
                         </Link>
-                      ))}
+                      ))
+                        ): (
+                          <li>No Bordering Country(ies)</li>
+                        )
+                    }
                    </ul>
            
-          </section>   
+          </section>  
       </ul>
 
    </div>

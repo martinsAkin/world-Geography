@@ -25,7 +25,7 @@ export function Country(){
   <div>
     <ol>
     {data.map((country) =>(
-        <Link to={`/details/${country.name}`}  key={country.name} className="countryDetails">
+        <Link to={`/details/${encodeURIComponent(country.name)}`}  key={country.name} className="countryDetails">
        
            <div>
             <img src={country.flag} className="countryFlag" />
