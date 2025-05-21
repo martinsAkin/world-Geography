@@ -7,7 +7,7 @@
  font-family: "Nunito Sans", serif;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 1023px) {
    #headbar{
    display: flex;
    justify-content: space-between;
