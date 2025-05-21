@@ -57,7 +57,7 @@ export function Homepage(){
     }
 
  return(
-  <div id="homepage-Body">
+  <div id="homepage-body">
     <Headbar/>
     <div className="search-box">
       <input type="text" id="searchbar" className="search bar" placeholder="Search for a country..." value={searchValue} autoCapitalize="words" onChange={handleSearch}/>
