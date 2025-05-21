@@ -506,6 +506,7 @@
     "alpha2Code": "AQ",
     "alpha3Code": "ATA",
     "callingCodes": ["672"],
+    "capital": "No Capital",
     "subregion": "Antarctica",
     "region": "Polar",
     "population": 1000,
@@ -522,12 +523,20 @@
       "UTC+10:00",
       "UTC+12:00"
     ],
+    "borders": [],
     "nativeName": "Antarctica",
     "numericCode": "010",
     "flags": {
       "svg": "https://flagcdn.com/aq.svg",
       "png": "https://flagcdn.com/w320/aq.png"
     },
+    "currencies": [
+      {
+        "code": "N/A",
+        "name": "No official currency",
+        "symbol": "N/A"
+      }
+    ],
     "languages": [
       {
         "iso639_1": "en",

@@ -22,7 +22,7 @@ export function Headbar(){
 
 export function Country(){
  return(
-  <div>
+  <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
     <ol>
     {data.map((country) =>(
         <Link to={`/details/${encodeURIComponent(country.name)}`}  key={country.name} className="countryDetails">
@@ -57,7 +57,7 @@ export function Homepage(){
     }
 
  return(
-  <div id="homepage-body">
+  <div>
     <Headbar/>
     <div className="search-box">
       <input type="text" id="searchbar" className="search bar" placeholder="Search for a country..." value={searchValue} autoCapitalize="words" onChange={handleSearch}/>
@@ -77,7 +77,7 @@ export function Homepage(){
 
     </div>
 
-        <div id="countryListAppended">
+        <div style={{marginTop: "1.5rem"}}>
           <Country />
         </div>
 

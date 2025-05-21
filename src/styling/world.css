@@ -7,7 +7,7 @@
  font-family: "Nunito Sans", serif;
 }
 
-@media (min-width: 320px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 767px) {
    #headbar{
    display: flex;
    justify-content: space-between;
@@ -36,7 +36,7 @@
     width: 85%;
     margin: 1.5rem 2rem;
     outline: none;
-    margin-top: 8em;
+    margin-top: 9rem;
   }
   .search-box{
     position: relative;
@@ -49,7 +49,7 @@
     border-radius: 10px;
     left: 13%;
     right: 20%;
-    top: 10rem;
+    top: 12rem;
     padding: 0.5rem;
 
     li{
@@ -59,12 +59,6 @@
       padding: 0.5rem;
       
     }
-  }
-  option{
-   background-color: hsl(209, 23%, 22%);
-  }
-  .filter{
-   margin: 1rem 2rem 2rem 2rem;
   }
   .countryFlag{
     height: 10rem;

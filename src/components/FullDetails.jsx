@@ -9,9 +9,6 @@ export function CountryComponent(){
  const country = countryData.find((c) => c.name === countryName)
  const alphaCodeToName = {}
  countryData.forEach(ctry => {alphaCodeToName[ctry.alpha3Code] = ctry.name})
-//  const getBorderNames = (borderAbbv) => {
-//   return borderAbbv.map(abbv => alphaCodeToName[abbv] || abbv)
-//  }
 
  if(!country) return <h2>Country Not Found!</h2>;
  
