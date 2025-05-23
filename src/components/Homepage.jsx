@@ -22,7 +22,7 @@ export function Headbar(){
 
 export function Country(){
  return(
-  <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+  <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 20px"}}>
     <ol>
     {data.map((country) =>(
         <Link to={`/details/${encodeURIComponent(country.name)}`}  key={country.name} className="countryDetails">
